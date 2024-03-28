@@ -63,4 +63,3 @@
     HTML
     CSS
     JavaScript
-    Banco de dados (opcional)
