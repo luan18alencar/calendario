@@ -43,7 +43,7 @@
   
   /* Weekend days styles */
   .calendar td:nth-of-type(1),
-  .calendar td:nth-of-type() {
+  .calendar td:nth-of-type(8) {
     color: #f00; /* Weekend in red */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Even stronger shadow */
   }
