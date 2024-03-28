@@ -1,59 +1,115 @@
-/* Reset de estilos */
+
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* Body styles */
   body {
-    font-family: sans-serif;
-    font-size: 16px;
+    background: url("path/to/grass.png") repeat scroll 0 0; /* Grass background image */
+    font-family: cursive, sans-serif; /* Fallback for cursive */
+    font-size: 18px;
     color: #333;
+    margin: 2rem auto;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   }
   
-  /* Estilo da tabela */
+  /* Table styles */
   .calendar {
-    width: 100%;
+    width: 600px; /* Adjusted width */
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    border: 2px solid #777; /* Thicker border */
+    border-radius: 20px; /* Large rounded corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+    margin: 0 auto; /* Center the table horizontally */
+    position: relative; /* Needed for cloud behind the table */
   }
   
   .calendar th,
   .calendar td {
-    border: 1px solid #ddd;
-    padding: 5px;
+    border: 1px dashed #aaa; /* Dashed borders */
+    padding: 15px 25px; /* More padding for content */
     text-align: center;
+    position: relative; /* Needed for day decorations */
   }
   
   .calendar th {
-    background-color: #f2f2f2;
+    background-color: # błęd (light blue with a hint of purple);
     font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); /* Stronger shadow */
   }
   
-  /* Estilo dos dias da semana */
-  .calendar td:nth-of-type(1) {
-    color: red;
+  /* Weekend days styles */
+  .calendar td:nth-of-type(1),
+  .calendar td:nth-of-type() {
+    color: #f00; /* Weekend in red */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Even stronger shadow */
   }
   
-  .calendar td:nth-of-type(7) {
-    color: blue;
+  /* Day decorations (optional) */
+  .calendar td:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    
+    opacity: 0.5; /* Semi-transparent */
+    animation: sunlight 2s ease-in-out infinite alternate; /* Animated glow */
   }
   
-  /* Estilo do dia selecionado */
+  @keyframes sunlight {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Selected day style */
   .calendar td.selected {
-    background-color: #fffacd;
+    background-color: #ffc107; /* Orange highlight */
+    border: 2px solid #f00; /* Red border */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7); /* Even stronger shadow */
+    cursor: pointer;
   }
   
-  /* Estilo dos elementos de seleção */
-  #color,
-  #day {
-    margin-right: 10px;
+  .calendar td.selected:after {
+    background-color: #f00; /* Red dot for selected day */
+    animation: heartbeat 1s ease-in-out infinite alternate; /* Pulsating animation */
   }
   
-  #color {
-    width: 150px;
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   
-  label {
-    font-weight: bold;
+  /* Cloud behind the table */
+  .calendar:after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(
   }
