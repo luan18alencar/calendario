@@ -50,9 +50,7 @@
 ### HTML
 <img src ="html.png">
 
-### Autores 
 
-    Luan Abreu de Alencar ☝️
 
 ## Contato
     github: luan18alencar
@@ -63,3 +61,8 @@
     HTML
     CSS
     JavaScript
+
+### Autores 
+
+    Luan Abreu de Alencar ☝️
+    linkedin: https://www.linkedin.com/in/luan-abreu-b48204290/
